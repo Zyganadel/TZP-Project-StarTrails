@@ -25,12 +25,12 @@
                 },
                 {
                     "name": "ThrottleUp",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "9a0cd12b-a05a-468a-946c-7f754d4ac420",
-                    "expectedControlType": "Axis",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 },
                 {
                     "name": "ThrottleDown",

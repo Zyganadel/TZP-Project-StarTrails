@@ -10,8 +10,6 @@ public class PlayerController : MonoBehaviour
     private int score = 0;
 
     //temp stuff
-    public TextMeshProUGUI scoreUI;
-    void SetScoreText() { scoreUI.SetText($"Score: {score}"); }
 
 
     void Start()
@@ -30,5 +28,4 @@ public class PlayerController : MonoBehaviour
         playerAttack.SetActive(true);
     }
 
-    void FoeDestroyed() { score += 1; SetScoreText(); }
 }

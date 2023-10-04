@@ -22,13 +22,13 @@ public class PlayerMovementHandler : MonoBehaviour
 
     public void OnThrottleUp()
     {
-        if (throttleValue < throttleMax) { throttleValue += 1 / Time.deltaTime; }
+        if (throttleValue < throttleMax) { throttleValue += 1; }
         if (throttleValue > throttleMax) { throttleValue = throttleMax; }
     }
 
     public void OnThrottleDown()
     {
-        if (throttleValue > throttleMin) { throttleValue -= 1 / Time.deltaTime; }
+        if (throttleValue > throttleMin) { throttleValue -= 1; }
         if (throttleValue < throttleMin) { throttleValue = throttleMin; }
     }
 
@@ -42,7 +42,9 @@ public class PlayerMovementHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float t = 1.0f;
+        //float t = Time.deltaTime;
         Debug.Log(rb.velocity.magnitude.ToString());
-        rb.AddForce(tf.forward * throttleValue * Time.deltaTime);
+        rb.AddForce(tf.forward * throttleValue * t);
     }
 }
