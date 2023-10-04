@@ -11,11 +11,13 @@ public class PlayerMovementHandler : MonoBehaviour
     public Vector2 lookValue;
     private Transform tf;
     private Rigidbody rb;
+    public float speedMult = 1;
     // Start is called before the first frame update
     void Start()
     {
         tf = GetComponent<Transform>();
         rb = GetComponent<Rigidbody>();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void OnTestKey() { Debug.Log("Test message."); }
@@ -32,19 +34,20 @@ public class PlayerMovementHandler : MonoBehaviour
         if (throttleValue < throttleMin) { throttleValue = throttleMin; }
     }
 
+    public void OnEscape() { Application.Quit(); }
+
     // take the vector2 "value" given by OnLook
     public void OnLook(InputValue value)
     {
         lookValue = value.Get<Vector2>();
-        tf.Rotate(lookValue.y, lookValue.x, 0.0f);
+        //rotate the parent of player stuff by the look value, but multiply it by 0.5
+        tf.Rotate(lookValue.y * 0.5f, lookValue.x * 0.5f, 0.0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        float t = 1.0f;
-        //float t = Time.deltaTime;
-        Debug.Log(rb.velocity.magnitude.ToString());
+        float t = Time.deltaTime * speedMult;
         rb.AddForce(tf.forward * throttleValue * t);
     }
 }
