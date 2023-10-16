@@ -22,18 +22,6 @@ public class PlayerMovementHandler : MonoBehaviour
 
     public void OnTestKey() { Debug.Log("Test message."); }
 
-    public void OnThrottleUp()
-    {
-        if (throttleValue < throttleMax) { throttleValue += 1; }
-        if (throttleValue > throttleMax) { throttleValue = throttleMax; }
-    }
-
-    public void OnThrottleDown()
-    {
-        if (throttleValue > throttleMin) { throttleValue -= 1; }
-        if (throttleValue < throttleMin) { throttleValue = throttleMin; }
-    }
-
     public void OnEscape() { Application.Quit(); }
 
     // take the vector2 "value" given by OnLook
@@ -49,5 +37,17 @@ public class PlayerMovementHandler : MonoBehaviour
     {
         float t = Time.deltaTime * speedMult;
         rb.AddForce(tf.forward * throttleValue * t);
+
+        // Move throttle stuff here.
+        if (Input.GetButton("ThrottleUp"))
+        {
+            if (throttleValue < throttleMax) { throttleValue += 1 * Time.deltaTime; }
+            if (throttleValue > throttleMax) { throttleValue = throttleMax; }
+        }
+        if (Input.GetButton("ThrottleDown"))
+        {
+            if (throttleValue > throttleMin) { throttleValue -= 1 * Time.deltaTime; }
+            if (throttleValue < throttleMin) { throttleValue = throttleMin; }
+        }
     }
 }
