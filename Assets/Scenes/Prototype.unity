@@ -1606,7 +1606,7 @@ MonoBehaviour:
   target: {fileID: 1410714113}
   rb: {fileID: 765829816}
   speed: 0.5
-  moveSpeed: 0
+  moveSpeed: 0.1
 --- !u!54 &765829816
 Rigidbody:
   m_ObjectHideFlags: 0
