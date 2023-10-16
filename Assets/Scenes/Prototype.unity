@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.009859464, g: 0.027328037, b: 0.029377276, a: 1}
+  m_IndirectSpecularColor: {r: 0.009859466, g: 0.027328026, b: 0.029377282, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1600,7 +1600,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 765829813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b8252e70c538df4b99c4bb1b90a80a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 427fc545c136efb4cb01d347d2e2ea8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1410714113}
@@ -2884,7 +2884,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc3abc232b94495439be110472c01cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAttack: {fileID: 2072042760}
+  beamWeapon: {fileID: 0}
+  beamDamage: 2
+  kineticWeapon: {fileID: 0}
+  kineticDamage: 2
+  missileWeapon: {fileID: 0}
+  missileDamage: 2
+  currentWeapon: {fileID: 0}
+  weapon: 0
 --- !u!1 &1436139055
 GameObject:
   m_ObjectHideFlags: 0
