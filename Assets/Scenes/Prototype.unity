@@ -2890,7 +2890,7 @@ MonoBehaviour:
   kineticDamage: 2
   missileWeapon: {fileID: 0}
   missileDamage: 2
-  currentWeapon: {fileID: 0}
+  currentWeapon: {fileID: 2072042760}
   weapon: 0
 --- !u!1 &1436139055
 GameObject:
