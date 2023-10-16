@@ -8,6 +8,7 @@ public class PlayerMovementHandler : MonoBehaviour
     public float throttleMax = 10.0f;
     public float throttleMin = 0.0f;
     public float throttleValue = 0.0f;
+    float throttleMod;
     public Vector2 lookValue;
     private Transform tf;
     private Rigidbody rb;
@@ -21,6 +22,13 @@ public class PlayerMovementHandler : MonoBehaviour
     }
 
     public void OnTestKey() { Debug.Log("Test message."); }
+
+    public void OnThrottle(InputValue value)
+    {
+        float rValue = value.Get<float>();
+        throttleMod = rValue;
+        Debug.Log(rValue);
+    }
 
     public void OnEscape() { Application.Quit(); }
 
@@ -36,18 +44,13 @@ public class PlayerMovementHandler : MonoBehaviour
     void Update()
     {
         float t = Time.deltaTime * speedMult;
+
+        throttleValue += throttleMod * Time.deltaTime;
+
+        if (throttleValue > throttleMax) { throttleValue = throttleMax; }
+        if (throttleValue < throttleMin) { throttleValue = throttleMin; }
+
         rb.AddForce(tf.forward * throttleValue * t);
 
-        // Move throttle stuff here.
-        if (Input.GetButton("ThrottleUp"))
-        {
-            if (throttleValue < throttleMax) { throttleValue += 1 * Time.deltaTime; }
-            if (throttleValue > throttleMax) { throttleValue = throttleMax; }
-        }
-        if (Input.GetButton("ThrottleDown"))
-        {
-            if (throttleValue > throttleMin) { throttleValue -= 1 * Time.deltaTime; }
-            if (throttleValue < throttleMin) { throttleValue = throttleMin; }
-        }
     }
 }
