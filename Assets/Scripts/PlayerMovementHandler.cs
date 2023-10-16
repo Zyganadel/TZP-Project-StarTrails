@@ -37,7 +37,7 @@ public class PlayerMovementHandler : MonoBehaviour
     {
         lookValue = value.Get<Vector2>();
         //rotate the parent of player stuff by the look value, but multiply it by 0.5
-        tf.Rotate(lookValue.y * 0.5f, lookValue.x * 0.5f, 0.0f);
+        rb.AddRelativeTorque(lookValue.y * 0.5f, lookValue.x * 0.5f, 0.0f);
     }
 
     // Update is called once per frame
