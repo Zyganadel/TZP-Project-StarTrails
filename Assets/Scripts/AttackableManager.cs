@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class AttackableManager : MonoBehaviour
 {
+    public int hp = 1;
     public string message;
+    int dTake = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,10 @@ public class AttackableManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("PlayerAttack")) { gameObject.SetActive(false); other.SendMessage(message); }
+        if (other.CompareTag("PlayerAttack"))
+        {
+            if (hp - dTake <= 0) { gameObject.SetActive(false); other.SendMessage(message); }
+            else { hp -= dTake; }
+        }
     }
 }
