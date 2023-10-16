@@ -24,7 +24,7 @@ public class AttackableManager : MonoBehaviour
     {
         if (other.CompareTag("PlayerAttack"))
         {
-            pc = other.GetComponent<PlayerController>();
+            pc = other.GetComponentInParent<PlayerController>();
             switch (pc.weapon)
             {
                 case Weapon.beam: dTake = pc.beamDamage; break;
