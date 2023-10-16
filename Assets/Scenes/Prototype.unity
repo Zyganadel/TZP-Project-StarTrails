@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.009859464, g: 0.027328037, b: 0.029377276, a: 1}
+  m_IndirectSpecularColor: {r: 0.009859466, g: 0.027328026, b: 0.029377282, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &38724960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 38724961}
+  m_Layer: 0
+  m_Name: tempKinetic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &38724961
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38724960}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1410714113}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &90464417
 GameObject:
   m_ObjectHideFlags: 0
@@ -1568,6 +1599,7 @@ GameObject:
   - component: {fileID: 765829814}
   - component: {fileID: 765829815}
   - component: {fileID: 765829816}
+  - component: {fileID: 765829817}
   m_Layer: 0
   m_Name: FighterFoe
   m_TagString: Untagged
@@ -1600,13 +1632,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 765829813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b8252e70c538df4b99c4bb1b90a80a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 427fc545c136efb4cb01d347d2e2ea8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1410714113}
   rb: {fileID: 765829816}
   speed: 0.5
-  moveSpeed: 0
+  moveSpeed: 0.1
 --- !u!54 &765829816
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1629,11 +1661,26 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &765829817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765829813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52fbfd9877db75c48b86e42f1be1d564, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 3
+  message: FoeDestroyed
+  pc: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2780,6 +2827,8 @@ Transform:
   m_Children:
   - {fileID: 1644805686}
   - {fileID: 182292325}
+  - {fileID: 2047958248}
+  - {fileID: 38724961}
   - {fileID: 2072042765}
   - {fileID: 330585546}
   m_Father: {fileID: 0}
@@ -2884,7 +2933,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc3abc232b94495439be110472c01cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAttack: {fileID: 2072042760}
+  beamWeapon: {fileID: 2072042760}
+  beamDamage: 2
+  kineticWeapon: {fileID: 38724960}
+  kineticDamage: 2
+  missileWeapon: {fileID: 2047958247}
+  missileDamage: 2
+  currentWeapon: {fileID: 2072042760}
+  weapon: 0
 --- !u!1 &1436139055
 GameObject:
   m_ObjectHideFlags: 0
@@ -3591,6 +3647,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2078725777}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2047958247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2047958248}
+  m_Layer: 0
+  m_Name: tempMissile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2047958248
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047958247}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1410714113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2057370160
 GameObject:

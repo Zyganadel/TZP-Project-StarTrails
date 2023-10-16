@@ -3,7 +3,7 @@ using UnityEngine;
 // To use this script, attach it to the GameObject that you would like to rotate towards another game object.
 // After attaching it, go to the inspector and drag the GameObject you would like to rotate towards into the target field.
 // Move the target around in the scene view to see the GameObject continuously rotate towards it.
-public class AutoRotate : MonoBehaviour
+public class AIMovement : MonoBehaviour
 {
     // The target marker.
     public Transform target;
@@ -11,7 +11,7 @@ public class AutoRotate : MonoBehaviour
 
     // Angular speed in radians per sec.
     public float speed = 1.0f;
-    public float moveSpeed = 0.0f;
+    public float moveSpeed = 0.1f;
 
     void Start()
     {
