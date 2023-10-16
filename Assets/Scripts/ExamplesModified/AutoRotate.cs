@@ -7,9 +7,16 @@ public class AutoRotate : MonoBehaviour
 {
     // The target marker.
     public Transform target;
+    public Rigidbody rb;
 
     // Angular speed in radians per sec.
     public float speed = 1.0f;
+    public float moveSpeed = 0.0f;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     void Update()
     {
@@ -27,5 +34,8 @@ public class AutoRotate : MonoBehaviour
 
         // Calculate a rotation a step closer to the target and applies rotation to this object
         transform.rotation = Quaternion.LookRotation(newDirection);
+
+        // Move the object
+        rb.AddForce(transform.forward * moveSpeed);
     }
 }
