@@ -24,24 +24,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ThrottleUp",
-                    "type": "Button",
-                    "id": "9a0cd12b-a05a-468a-946c-7f754d4ac420",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "ThrottleDown",
-                    "type": "Button",
-                    "id": "0fc57f00-9ce1-4a3f-9c06-68989ddf1b75",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Escape",
                     "type": "Button",
                     "id": "5d18c6f7-ea18-4027-aea1-6b1fc16e6b16",
@@ -49,6 +31,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ChangeWeapon",
+                    "type": "Button",
+                    "id": "766995df-78d6-44e0-a103-ed07beb712db",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Throttle",
+                    "type": "Value",
+                    "id": "2956bdd2-4967-4a0f-91b8-75b612cf7806",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -98,28 +98,6 @@
                 },
                 {
                     "name": "",
-                    "id": "dd5647b6-271a-4280-8296-41ca79d98088",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ThrottleUp",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6462f9f5-d21c-40e7-9627-a9921a73d57f",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ThrottleDown",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "4229837d-8753-42a6-a050-6a6a2a04ee09",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
@@ -128,6 +106,50 @@
                     "action": "Escape",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5e5ffbe0-2780-48dd-8c55-80400c900384",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "ChangeWeapon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "3ab1a15f-c1bf-4e39-960b-0a6388733dbb",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Throttle",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "643f5c01-1538-4875-b591-960ff3162b6c",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Throttle",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "negative",
+                    "id": "edb19c38-75e0-4b02-95c9-a1d04e5311a9",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Throttle",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },
