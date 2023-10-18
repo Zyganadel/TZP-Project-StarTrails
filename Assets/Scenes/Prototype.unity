@@ -2850,7 +2850,7 @@ MonoBehaviour:
   throttleMin: 0
   throttleValue: 0
   lookValue: {x: 0, y: 0}
-  speedMult: 10
+  speedMult: 15
 --- !u!54 &1410714118
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2860,7 +2860,7 @@ Rigidbody:
   m_GameObject: {fileID: 1410714112}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0.5
+  m_Drag: 0.75
   m_AngularDrag: 1.25
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
