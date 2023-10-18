@@ -25,5 +25,5 @@ public class TempBeam : MonoBehaviour
         if (beamActiveTime >= beamMaxTime) { gameObject.SetActive(false); }
     }
 
-    void FoeDestroyed() { player.SendMessage("FoeDestroyed"); }
+    void FoeDestroyed(int v = 1) { player.SendMessage("FoeDestroyed", v); }
 }

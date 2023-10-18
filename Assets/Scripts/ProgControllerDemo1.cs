@@ -8,6 +8,7 @@ using UnityEngine.SocialPlatforms.Impl;
 public class ProgControllerDemo1 : MonoBehaviour
 {
     public TextMeshProUGUI scoreUI;
+    PlayerController playerController;
     void SetScoreText()
     {
         scoreUI.SetText($"Score: {score}");
@@ -23,13 +24,18 @@ public class ProgControllerDemo1 : MonoBehaviour
     void Start()
     {
         SetScoreText();
+        playerController = GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (playerController.hp < 1)
+        {
+            
+            //SceneManager.LoadScene(2);
+        }
     }
 
-    void FoeDestroyed() { score += 1; SetScoreText(); }
+    void FoeDestroyed(int value = 1) { score += value; SetScoreText(); }
 }

@@ -18,15 +18,17 @@ public class PlayerController : MonoBehaviour
     public GameObject kineticWeapon;
     public int kineticDamage = 2;
     public GameObject missileWeapon;
-    public int missileDamage = 2;
+    public int missileDamage = 4;
     // add missile later.
 
     public GameObject currentWeapon;
+    public int currentDamage = 2;
     public Weapon weapon;
 
     private int score = 0;
 
-    //temp stuff
+    public int sp = 10; //shield
+    public int hp = 10; //health
 
 
     void Start()
@@ -48,14 +50,17 @@ public class PlayerController : MonoBehaviour
             case Weapon.beam:
                 weapon = Weapon.kinetic;
                 currentWeapon = kineticWeapon;
+                currentDamage = kineticDamage;
                 break;
             case Weapon.kinetic:
                 weapon = Weapon.missile;
                 currentWeapon = missileWeapon;
-                break; //this will need to be replaced with missile eventually.
+                currentDamage = missileDamage;
+                break;
             case Weapon.missile:
                 weapon = Weapon.beam;
                 currentWeapon = beamWeapon;
+                currentDamage = beamDamage;
                 break;
         }
     }
@@ -66,4 +71,39 @@ public class PlayerController : MonoBehaviour
         if (weapon == Weapon.kinetic) { kineticWeapon.SendMessage("Fire"); }
     }
 
+    void OnCollisionEnter(Collision collider)
+    {
+        string cTag = collider.gameObject.tag;
+        switch (cTag)
+        {
+            case "Asteroid":
+                TakeKineticDamage(1);
+                break;
+            case "Ship":
+                TakeKineticDamage(1);
+                break;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "FoeAttack")
+        {
+            
+            TakeBeamDamage(1);
+        }
+    }
+
+    void TakeKineticDamage(int damage)
+    {
+
+        if (sp > 0) { sp -= damage; }
+        else { hp -= 2 * damage; }
+    }
+
+    void TakeBeamDamage(int damage)
+    {
+        if (sp > 0) { sp -= damage * 2; }
+        else { hp -= damage; }
+    }
 }
