@@ -6,6 +6,8 @@ public class AttackerManager : MonoBehaviour
 {
     public GameObject beam;
     public int beamDamage;
+    public float beamCD = 2;
+    private float beamTimer = 0;
     private AIMovement trackTarget;
     private Transform tfMine;
     private Transform tfTarget;
@@ -32,9 +34,11 @@ public class AttackerManager : MonoBehaviour
         trackTarget.target = tfTarget;
         tfTarget = target.GetComponent<Transform>();
         float dist = Vector3.Distance(tfTarget.position, tfMine.position);
-        if (dist <= 8)
+        if (dist <= 8 && beamTimer > beamCD)
         {
             beam.SetActive(true);
+            beamTimer = 0;
         }
+        beamTimer += Time.deltaTime;
     }
 }

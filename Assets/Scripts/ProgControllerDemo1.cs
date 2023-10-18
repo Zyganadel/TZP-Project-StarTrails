@@ -30,8 +30,12 @@ public class ProgControllerDemo1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerController.hp < 1) { SceneManager.LoadScene(2); }
+        if (playerController.hp < 1)
+        {
+            
+            //SceneManager.LoadScene(2);
+        }
     }
 
-    void FoeDestroyed(int value) { score += value; SetScoreText(); }
+    void FoeDestroyed(int value = 1) { score += value; SetScoreText(); }
 }

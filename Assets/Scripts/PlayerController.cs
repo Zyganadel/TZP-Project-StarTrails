@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     // add missile later.
 
     public GameObject currentWeapon;
-    public int currentDamage;
+    public int currentDamage = 2;
     public Weapon weapon;
 
     private int score = 0;
@@ -89,8 +89,8 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "FoeAttack")
         {
-            AttackerManager am = other.gameObject.GetComponent<AttackerManager>();
-            TakeBeamDamage(am.beamDamage);
+            
+            TakeBeamDamage(1);
         }
     }
 
