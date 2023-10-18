@@ -18,10 +18,11 @@ public class PlayerController : MonoBehaviour
     public GameObject kineticWeapon;
     public int kineticDamage = 2;
     public GameObject missileWeapon;
-    public int missileDamage = 2;
+    public int missileDamage = 4;
     // add missile later.
 
     public GameObject currentWeapon;
+    public int currentDamage;
     public Weapon weapon;
 
     private int score = 0;
@@ -48,14 +49,17 @@ public class PlayerController : MonoBehaviour
             case Weapon.beam:
                 weapon = Weapon.kinetic;
                 currentWeapon = kineticWeapon;
+                currentDamage = kineticDamage;
                 break;
             case Weapon.kinetic:
                 weapon = Weapon.missile;
                 currentWeapon = missileWeapon;
-                break; //this will need to be replaced with missile eventually.
+                currentDamage = missileDamage;
+                break;
             case Weapon.missile:
                 weapon = Weapon.beam;
                 currentWeapon = beamWeapon;
+                currentDamage = beamDamage;
                 break;
         }
     }
@@ -63,7 +67,7 @@ public class PlayerController : MonoBehaviour
     void OnFire()
     {
         currentWeapon.SetActive(true);
-        if (weapon == Weapon.kinetic) { kineticWeapon.SendMessage("Fire"); }
+        if (weapon == Weapon.kinetic) { kineticWeapon.SendMessage("Fire", currentDamage); }
     }
 
 }
