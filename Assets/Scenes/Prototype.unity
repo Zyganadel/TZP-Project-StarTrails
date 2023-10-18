@@ -99,7 +99,6 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_LightingSettings: {fileID: 0}
-  
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -124,7 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-
 --- !u!1 &38724960
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +154,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1410714113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-
 --- !u!1 &90464417
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,6 +621,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TempShip
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 069b98af97289434a973697751298d48,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2149,7 +2151,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2078725777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-
 --- !u!1001 &980565445
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2329,7 +2330,6 @@ Transform:
   m_Father: {fileID: 2078725777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1217614807
-
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2783,12 +2783,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1644805686}
   - {fileID: 182292325}
-
   - {fileID: 2047958248}
   - {fileID: 38724961}
   - {fileID: 8676189726167805038}
-
   - {fileID: 330585546}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2809,9 +2808,7 @@ MonoBehaviour:
   throttleMin: 0
   throttleValue: 0
   lookValue: {x: 0, y: 0}
-
   speedMult: 15
-
 --- !u!54 &1410714118
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2895,7 +2892,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc3abc232b94495439be110472c01cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-
   beamWeapon: {fileID: 9145888022218386813}
   beamDamage: 2
   kineticWeapon: {fileID: 38724960}
@@ -3371,6 +3367,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2078725777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1644805686 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 639aa24ccaa6a104e8dcbdd48c40197e,
+    type: 3}
+  m_PrefabInstance: {fileID: 980565445}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1727237022
 GameObject:
   m_ObjectHideFlags: 0
@@ -3686,7 +3688,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2078725777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-
 --- !u!1 &2047958247
 GameObject:
   m_ObjectHideFlags: 0
@@ -3718,7 +3719,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1410714113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-
 --- !u!1 &2057370160
 GameObject:
   m_ObjectHideFlags: 0
@@ -4181,8 +4181,6 @@ SceneRoots:
   - {fileID: 1483080833}
   - {fileID: 118891309}
   - {fileID: 313578577}
-
   - {fileID: 96637661}
   - {fileID: 360919955}
   - {fileID: 1500514959}
-

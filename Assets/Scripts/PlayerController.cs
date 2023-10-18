@@ -3,10 +3,16 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+public enum Weapon
+{
+    beam,
+    kinetic,
+    missile
+}
+
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
-
     public GameObject beamWeapon;
     public int beamDamage = 2;
     public GameObject kineticWeapon;
@@ -36,7 +42,6 @@ public class PlayerController : MonoBehaviour
         
     }
 
-
     void OnChangeWeapon() // eventually use a value to determine whether to go up or down a list of weapons.
     {
         currentWeapon.SetActive(false); // this is to prevent player from permanently activating their weapons by switching them.
@@ -62,7 +67,8 @@ public class PlayerController : MonoBehaviour
 
     void OnFire()
     {
-        playerAttack.SetActive(true);
+        currentWeapon.SetActive(true);
+        if (weapon == Weapon.kinetic) { kineticWeapon.SendMessage("Fire"); }
     }
 
     void OnCollisionEnter(Collision collider)
