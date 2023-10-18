@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PlayerAttack
   - FoeAttack
+  - Asteroid
+  - Ship
   layers:
   - Default
   - TransparentFX

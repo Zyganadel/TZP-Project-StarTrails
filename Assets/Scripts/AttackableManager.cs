@@ -5,7 +5,8 @@ using UnityEngine;
 public class AttackableManager : MonoBehaviour
 {
     public int hp = 1;
-    public string message;
+    public string defeatMsg;
+    public int scoreValue;
     int dTake = 0;
     public PlayerController pc;
     // Start is called before the first frame update
@@ -25,13 +26,8 @@ public class AttackableManager : MonoBehaviour
         if (other.CompareTag("PlayerAttack"))
         {
             pc = other.GetComponentInParent<PlayerController>();
-            switch (pc.weapon)
-            {
-                case Weapon.beam: dTake = pc.beamDamage; break;
-                case Weapon.kinetic: dTake = pc.kineticDamage; break;
-                case Weapon.missile: dTake = pc.missileDamage; break;
-            }
-            if (hp - dTake <= 0) { gameObject.SetActive(false); other.SendMessage(message); }
+            dTake = pc.currentDamage;
+            if (hp - dTake <= 0) { gameObject.SetActive(false); other.SendMessage(defeatMsg, scoreValue); }
             else { hp -= dTake; }
         }
     }

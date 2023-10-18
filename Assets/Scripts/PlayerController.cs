@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
     void OnFire()
     {
         currentWeapon.SetActive(true);
-        if (weapon == Weapon.kinetic) { kineticWeapon.SendMessage("Fire", currentDamage); }
+        if (weapon == Weapon.kinetic) { kineticWeapon.SendMessage("Fire"); }
     }
 
     void OnCollisionEnter(Collision collider)
@@ -83,6 +83,11 @@ public class PlayerController : MonoBehaviour
                 TakeKineticDamage(1);
                 break;
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "FoeAttack") { }
     }
 
     void TakeKineticDamage(int damage)

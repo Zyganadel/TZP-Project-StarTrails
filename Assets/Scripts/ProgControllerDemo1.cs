@@ -33,5 +33,5 @@ public class ProgControllerDemo1 : MonoBehaviour
         if (playerController.hp > 1) { SceneManager.LoadScene(2); }
     }
 
-    void FoeDestroyed() { score += 1; SetScoreText(); }
+    void FoeDestroyed(int value) { score += value; SetScoreText(); }
 }
