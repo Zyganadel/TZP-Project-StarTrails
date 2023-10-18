@@ -5,9 +5,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovementHandler : MonoBehaviour
 {
+    public float lookSensitivity = 0.3f;
     public float throttleMax = 10.0f;
     public float throttleMin = 0.0f;
     public float throttleValue = 0.0f;
+    float throttleMod;
     public Vector2 lookValue;
     private Transform tf;
     private Rigidbody rb;
@@ -22,16 +24,11 @@ public class PlayerMovementHandler : MonoBehaviour
 
     public void OnTestKey() { Debug.Log("Test message."); }
 
-    public void OnThrottleUp()
+    public void OnThrottle(InputValue value)
     {
-        if (throttleValue < throttleMax) { throttleValue += 1; }
-        if (throttleValue > throttleMax) { throttleValue = throttleMax; }
-    }
-
-    public void OnThrottleDown()
-    {
-        if (throttleValue > throttleMin) { throttleValue -= 1; }
-        if (throttleValue < throttleMin) { throttleValue = throttleMin; }
+        float rValue = value.Get<float>();
+        throttleMod = rValue;
+        Debug.Log(rValue);
     }
 
     public void OnEscape() { Application.Quit(); }
@@ -41,13 +38,20 @@ public class PlayerMovementHandler : MonoBehaviour
     {
         lookValue = value.Get<Vector2>();
         //rotate the parent of player stuff by the look value, but multiply it by 0.5
-        tf.Rotate(lookValue.y * 0.5f, lookValue.x * 0.5f, 0.0f);
+        rb.AddRelativeTorque(lookValue.y * lookSensitivity, lookValue.x * lookSensitivity, 0.0f);
     }
 
     // Update is called once per frame
     void Update()
     {
         float t = Time.deltaTime * speedMult;
+
+        throttleValue += throttleMod * Time.deltaTime;
+
+        if (throttleValue > throttleMax) { throttleValue = throttleMax; }
+        if (throttleValue < throttleMin) { throttleValue = throttleMin; }
+
         rb.AddForce(tf.forward * throttleValue * t);
+
     }
 }
