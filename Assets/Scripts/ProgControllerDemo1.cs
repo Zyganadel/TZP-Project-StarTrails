@@ -33,7 +33,7 @@ public class ProgControllerDemo1 : MonoBehaviour
         if (playerController.hp < 1)
         {
             
-            //SceneManager.LoadScene(2);
+            SceneManager.LoadScene(2);
         }
     }
 
