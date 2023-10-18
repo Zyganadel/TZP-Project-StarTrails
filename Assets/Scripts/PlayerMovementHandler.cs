@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovementHandler : MonoBehaviour
 {
+    public float lookSensitivity = 0.3f;
     public float throttleMax = 10.0f;
     public float throttleMin = 0.0f;
     public float throttleValue = 0.0f;
@@ -37,7 +38,7 @@ public class PlayerMovementHandler : MonoBehaviour
     {
         lookValue = value.Get<Vector2>();
         //rotate the parent of player stuff by the look value, but multiply it by 0.5
-        rb.AddRelativeTorque(lookValue.y * 0.5f, lookValue.x * 0.5f, 0.0f);
+        rb.AddRelativeTorque(lookValue.y * lookSensitivity, lookValue.x * lookSensitivity, 0.0f);
     }
 
     // Update is called once per frame
