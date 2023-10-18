@@ -87,7 +87,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "FoeAttack") { }
+        if (other.gameObject.tag == "FoeAttack")
+        {
+            AttackerManager am = other.gameObject.GetComponent<AttackerManager>();
+            TakeBeamDamage(am.beamDamage);
+        }
     }
 
     void TakeKineticDamage(int damage)

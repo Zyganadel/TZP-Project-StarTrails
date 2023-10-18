@@ -5,6 +5,7 @@ using UnityEngine;
 public class AttackerManager : MonoBehaviour
 {
     public GameObject beam;
+    public int beamDamage;
     private AIMovement trackTarget;
     private Transform tfMine;
     private Transform tfTarget;
