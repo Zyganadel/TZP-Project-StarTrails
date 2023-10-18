@@ -27,7 +27,8 @@ public class PlayerController : MonoBehaviour
 
     private int score = 0;
 
-    //temp stuff
+    public int sp = 10; //shield
+    public int hp = 10; //health
 
 
     void Start()
@@ -70,4 +71,30 @@ public class PlayerController : MonoBehaviour
         if (weapon == Weapon.kinetic) { kineticWeapon.SendMessage("Fire", currentDamage); }
     }
 
+    void OnCollisionEnter(Collision collider)
+    {
+        string cTag = collider.gameObject.tag;
+        switch (cTag)
+        {
+            case "Asteroid":
+                TakeKineticDamage(1);
+                break;
+            case "Ship":
+                TakeKineticDamage(1);
+                break;
+        }
+    }
+
+    void TakeKineticDamage(int damage)
+    {
+
+        if (sp > 0) { sp -= damage; }
+        else { hp -= 2 * damage; }
+    }
+
+    void TakeBeamDamage(int damage)
+    {
+        if (sp > 0) { sp -= damage * 2; }
+        else { hp -= damage; }
+    }
 }

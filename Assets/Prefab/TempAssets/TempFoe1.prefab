@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2201414220712780606}
   m_Layer: 0
   m_Name: TempFoe1
-  m_TagString: FoeAttack
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,4 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52fbfd9877db75c48b86e42f1be1d564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 1
   message: FoeDestroyed
+  pc: {fileID: 0}
