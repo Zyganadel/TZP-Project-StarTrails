@@ -315,6 +315,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1410714112}
+    - target: {fileID: 2384147224093632833, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
+        type: 3}
+      propertyPath: prc
+      value: 
+      objectReference: {fileID: 1410714120}
     - target: {fileID: 2488472968816540419, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2044,6 +2049,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerShip
       objectReference: {fileID: 0}
+    - target: {fileID: 2735495530424406953, guid: 639aa24ccaa6a104e8dcbdd48c40197e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 639aa24ccaa6a104e8dcbdd48c40197e,
         type: 3}
       propertyPath: m_Convex
@@ -2066,6 +2076,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -5243988174349660497, guid: 639aa24ccaa6a104e8dcbdd48c40197e,
         type: 3}
+    - target: {fileID: 8274740005720251132, guid: 639aa24ccaa6a104e8dcbdd48c40197e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2413,6 +2428,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1410714112}
+    - target: {fileID: 2384147224093632833, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
+        type: 3}
+      propertyPath: prc
+      value: 
+      objectReference: {fileID: 1410714120}
     - target: {fileID: 2488472968816540419, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
         type: 3}
       propertyPath: m_LocalPosition.x
