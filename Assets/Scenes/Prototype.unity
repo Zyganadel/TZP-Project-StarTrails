@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.009859464, g: 0.027328037, b: 0.029377276, a: 1}
+  m_IndirectSpecularColor: {r: 0.009859466, g: 0.027328026, b: 0.029377282, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -326,6 +326,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3771717668675972566, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3783184902605789945, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
         type: 3}
@@ -2212,7 +2217,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 639aa24ccaa6a104e8dcbdd48c40197e,
         type: 3}
       propertyPath: m_Name
-      value: TerranInterceptor
+      value: PlayerShip
       objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 639aa24ccaa6a104e8dcbdd48c40197e,
         type: 3}
