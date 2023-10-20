@@ -31,11 +31,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: defeatMsg
-    value: FoeDefeated
+    value: FoeDestroyed
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: scoreValue
-    value: 1
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: prc
