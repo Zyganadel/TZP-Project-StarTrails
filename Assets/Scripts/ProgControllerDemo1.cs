@@ -7,12 +7,13 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class ProgControllerDemo1 : MonoBehaviour
 {
+    public int reqScore = 10;
     public TextMeshProUGUI scoreUI;
     PlayerController playerController;
     void SetScoreText()
     {
         scoreUI.SetText($"Score: {score}");
-        if (score >= 4)
+        if (score >= reqScore)
         {
             Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene(1);
