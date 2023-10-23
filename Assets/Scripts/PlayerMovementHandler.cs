@@ -54,9 +54,4 @@ public class PlayerMovementHandler : MonoBehaviour
 
         rb.AddForce(tf.forward * throttleValue * t);
     }
-
-    void EarlyUpdate()
-    {
-        forward = transform.forward;
-    }
 }
