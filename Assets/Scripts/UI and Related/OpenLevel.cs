@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class OpenLevel : MonoBehaviour
 {
-    public Dropdown d1;
     public Button b;
     public int sceneID;
 
@@ -13,17 +12,16 @@ public class OpenLevel : MonoBehaviour
     {
         Button btn = b.GetComponent<Button>();
         btn.onClick.AddListener(OnClick);
-        Dropdown d2 = d1.GetComponent<Dropdown>();
-        d2.onValueChanged.AddListener(delegate { OnValueChanged(d2); });
     }
 
     void OnClick()
     {
         SceneManager.LoadScene(sceneID);
     }
-    void OnValueChanged(Dropdown change)
+    
+    void SetScene(int n)
     {
-        sceneID = change.value;
-        Debug.Log(change.value);
+        sceneID = n;
+        Debug.Log(n);
     }
 }
