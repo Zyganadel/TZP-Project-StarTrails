@@ -5,3 +5,7 @@ weapons to 123 not e
 drift the turningthingy
 unwack the throttle mechanic
 make controls intuitive
+
+Polish:
+
+Make craters in asteroids deeper.
