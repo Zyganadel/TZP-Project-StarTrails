@@ -318,7 +318,7 @@ PrefabInstance:
     - target: {fileID: 2384147224093632833, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
         type: 3}
       propertyPath: hp
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2384147224093632833, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
         type: 3}
@@ -328,7 +328,7 @@ PrefabInstance:
     - target: {fileID: 2384147224093632833, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
         type: 3}
       propertyPath: maxHP
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2488472968816540419, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
         type: 3}
@@ -668,7 +668,7 @@ PrefabInstance:
     - target: {fileID: 2384147224093632833, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
         type: 3}
       propertyPath: hp
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2384147224093632833, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
         type: 3}
@@ -678,7 +678,7 @@ PrefabInstance:
     - target: {fileID: 2384147224093632833, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
         type: 3}
       propertyPath: maxHP
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2488472968816540419, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
         type: 3}
@@ -2451,7 +2451,7 @@ PrefabInstance:
     - target: {fileID: 2384147224093632833, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
         type: 3}
       propertyPath: hp
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2384147224093632833, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
         type: 3}
@@ -2461,7 +2461,7 @@ PrefabInstance:
     - target: {fileID: 2384147224093632833, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
         type: 3}
       propertyPath: maxHP
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2488472968816540419, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
         type: 3}
@@ -2904,8 +2904,8 @@ MonoBehaviour:
   currentWeapon: {fileID: 9145888022218386813}
   currentDamage: 2
   weapon: 0
-  sp: 10
-  hp: 10
+  sp: 20
+  hp: 30
 --- !u!1001 &1427110420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3311,7 +3311,7 @@ PrefabInstance:
     - target: {fileID: 2384147224093632833, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
         type: 3}
       propertyPath: hp
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2384147224093632833, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
         type: 3}
@@ -3326,7 +3326,7 @@ PrefabInstance:
     - target: {fileID: 2384147224093632833, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
         type: 3}
       propertyPath: maxHP
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2488472968816540419, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
         type: 3}

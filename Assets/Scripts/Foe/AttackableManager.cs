@@ -36,9 +36,12 @@ public class AttackableManager : MonoBehaviour
             else
             {
                 hp -= dTake;
-                hpBar.hpFloat = hp / maxHP;
-                Debug.Log(hpBar.hpFloat);
             }
+
+            float hp2 = hp;
+            float maxHP2 = maxHP;
+
+            hpBar.hpFloat = hp2 / maxHP2;
         }
     }
 }
