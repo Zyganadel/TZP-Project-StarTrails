@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 3
+  maxHP: 1
   defeatMsg: FoeDestroyed
   scoreValue: 2
   prc: {fileID: 0}
