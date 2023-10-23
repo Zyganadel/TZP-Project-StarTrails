@@ -5,6 +5,7 @@ using UnityEngine;
 public class AttackableManager : MonoBehaviour
 {
     public int hp = 1;
+    public int maxHP = 1;
     public string defeatMsg;
     public int scoreValue;
     int dTake = 0;
