@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.009859466, g: 0.027328026, b: 0.029377282, a: 1}
+  m_IndirectSpecularColor: {r: 0.009859464, g: 0.027328037, b: 0.029377276, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1912,6 +1912,98 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &854361580
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 7f554a948fcf0544f8ee631357daec99,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f554a948fcf0544f8ee631357daec99,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f554a948fcf0544f8ee631357daec99,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f554a948fcf0544f8ee631357daec99,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f554a948fcf0544f8ee631357daec99,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f554a948fcf0544f8ee631357daec99,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f554a948fcf0544f8ee631357daec99,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f554a948fcf0544f8ee631357daec99,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f554a948fcf0544f8ee631357daec99,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f554a948fcf0544f8ee631357daec99,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7f554a948fcf0544f8ee631357daec99,
+        type: 3}
+      propertyPath: m_Name
+      value: FoeHPBar
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7f554a948fcf0544f8ee631357daec99,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 854361582}
+  m_SourcePrefab: {fileID: 100100000, guid: 7f554a948fcf0544f8ee631357daec99, type: 3}
+--- !u!1 &854361581 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7f554a948fcf0544f8ee631357daec99,
+    type: 3}
+  m_PrefabInstance: {fileID: 854361580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &854361582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854361581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8486392796edd04e9792762347e9f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pmh: {fileID: 0}
+  speed: 100
 --- !u!1001 &915749686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2780,6 +2872,7 @@ MonoBehaviour:
   throttleValue: 0
   lookValue: {x: 0, y: 0}
   speedMult: 20
+  forward: {x: 0, y: 0, z: 0}
 --- !u!54 &1410714118
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2850,6 +2943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6a4b0525a1193408e368fe3c650206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reqScore: 10
   scoreUI: {fileID: 1436139057}
 --- !u!114 &1410714122
 MonoBehaviour:
@@ -4699,3 +4793,4 @@ SceneRoots:
   - {fileID: 118891309}
   - {fileID: 313578577}
   - {fileID: 1438596357}
+  - {fileID: 854361580}
