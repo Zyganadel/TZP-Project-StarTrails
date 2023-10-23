@@ -14,6 +14,7 @@ public class PlayerMovementHandler : MonoBehaviour
     private Transform tf;
     private Rigidbody rb;
     public float speedMult = 1;
+    public Vector3 forward;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +53,10 @@ public class PlayerMovementHandler : MonoBehaviour
         if (throttleValue < throttleMin) { throttleValue = throttleMin; }
 
         rb.AddForce(tf.forward * throttleValue * t);
+    }
 
+    void EarlyUpdate()
+    {
+        forward = transform.forward;
     }
 }
