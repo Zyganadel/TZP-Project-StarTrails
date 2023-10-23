@@ -26,6 +26,6 @@ public class LevelSelector : MonoBehaviour
     void OnValueChanged(Dropdown d)
     {
         state = d.value;
-        button.SendMessage("SetScene", d.value);
+        button.SendMessage("SetScene", d.value + 4);
     }
 }
