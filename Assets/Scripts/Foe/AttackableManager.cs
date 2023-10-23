@@ -9,11 +9,14 @@ public class AttackableManager : MonoBehaviour
     public string defeatMsg;
     public int scoreValue;
     int dTake = 0;
+
     public ProgControllerDemo1 prc;
+    BarManager hpBar;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        hpBar = GetComponentInChildren<BarManager>();
     }
 
     // Update is called once per frame
@@ -30,7 +33,12 @@ public class AttackableManager : MonoBehaviour
             PlayerController pc = other.GetComponentInParent<PlayerController>();
             dTake = pc.currentDamage;
             if (hp - dTake <= 0) { gameObject.SetActive(false); other.SendMessage(defeatMsg, scoreValue); }
-            else { hp -= dTake; }
+            else
+            {
+                hp -= dTake;
+                hpBar.hpFloat = hp / maxHP;
+                Debug.Log(hpBar.hpFloat);
+            }
         }
     }
 }
