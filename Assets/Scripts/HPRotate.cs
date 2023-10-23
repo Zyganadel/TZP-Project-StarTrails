@@ -8,16 +8,13 @@ public class HPRotate : MonoBehaviour
     // The target marker.
     GameObject player;
     public PlayerMovementHandler pmh;
-    public Rigidbody rb;
 
     // Angular speed in radians per sec.
     public float speed = 100.0f;
-    public float moveSpeed = 0.1f;
 
     void Start()
     {
         player = GameObject.Find("Player");
-        rb = GetComponent<Rigidbody>();
         pmh = player.GetComponent<PlayerMovementHandler>();
     }
 
@@ -37,8 +34,5 @@ public class HPRotate : MonoBehaviour
 
         // Calculate a rotation a step closer to the target and applies rotation to this object
         transform.rotation = Quaternion.LookRotation(newDirection);
-
-        // Move the object
-        rb.AddForce(transform.forward * moveSpeed);
     }
 }
