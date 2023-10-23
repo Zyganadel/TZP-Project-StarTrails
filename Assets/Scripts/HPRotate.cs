@@ -7,11 +7,8 @@ public class HPRotate : MonoBehaviour
 {
     // The target marker.
     GameObject player;
-    public Transform ptf; //player transform
-    public Transform otf; //our transform
-
-    // Angular speed in radians per sec.
-    public float speed = 100.0f;
+    Transform ptf; //player transform
+    Transform otf; //our transform
 
     void Start()
     {
