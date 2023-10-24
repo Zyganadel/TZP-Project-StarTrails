@@ -126,16 +126,17 @@ public class PlayerController : MonoBehaviour
 
     void TakeKineticDamage(int damage)
     {
-
         if (sp > 0) { sp -= damage; }
         else { hp -= 2 * damage; }
 
-        
+        UpdateGUI();
     }
 
     void TakeBeamDamage(int damage)
     {
         if (sp > 0) { sp -= damage * 2; }
         else { hp -= damage; }
+
+        UpdateGUI();
     }
 }
