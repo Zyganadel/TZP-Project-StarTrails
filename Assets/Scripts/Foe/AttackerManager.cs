@@ -31,8 +31,8 @@ public class AttackerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        trackTarget.target = tfTarget;
         tfTarget = target.GetComponent<Transform>();
+        trackTarget.target = tfTarget;
         float dist = Vector3.Distance(tfTarget.position, tfMine.position);
         if (dist <= 8 && beamTimer > beamCD)
         {

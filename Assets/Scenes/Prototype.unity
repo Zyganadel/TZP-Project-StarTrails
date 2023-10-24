@@ -385,6 +385,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FighterFoe
       objectReference: {fileID: 0}
+    - target: {fileID: 4313538708114957961, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1410714113}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -491,6 +496,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1436139056}
+  - {fileID: 2220535773891902571}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -735,6 +741,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FighterFoe
       objectReference: {fileID: 0}
+    - target: {fileID: 4313538708114957961, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1410714113}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2518,6 +2529,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FighterFoe (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4313538708114957961, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1410714113}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2804,12 +2820,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf4c6d0eb008d244ac28e6858f9682a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookSensitivity: 0.25
-  throttleMax: 10
+  lookSensitivity: 0.2
+  throttleMax: 5
   throttleMin: 0
   throttleValue: 0
   lookValue: {x: 0, y: 0}
-  speedMult: 20
+  speedMult: 30
   forward: {x: 0, y: 0, z: 0}
 --- !u!54 &1410714118
 Rigidbody:
@@ -2821,7 +2837,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0.75
-  m_AngularDrag: 1.25
+  m_AngularDrag: 1.5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2904,6 +2920,8 @@ MonoBehaviour:
   currentWeapon: {fileID: 9145888022218386813}
   currentDamage: 2
   weapon: 0
+  isp: 10
+  ihp: 10
   sp: 5
   hp: 10
 --- !u!1001 &1427110420
@@ -3383,6 +3401,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FighterFoe (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4313538708114957961, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1410714113}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4609,6 +4632,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2117921395}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2220535773891902571 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5586440558994801583, guid: 2ca7f0bea87a6454898d2257b372160e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8357982970476114723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3280260043583781315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4664,6 +4693,74 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &8357982970476114723
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 118891309}
+    m_Modifications:
+    - target: {fileID: 5586440558994801583, guid: 2ca7f0bea87a6454898d2257b372160e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586440558994801583, guid: 2ca7f0bea87a6454898d2257b372160e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586440558994801583, guid: 2ca7f0bea87a6454898d2257b372160e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586440558994801583, guid: 2ca7f0bea87a6454898d2257b372160e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586440558994801583, guid: 2ca7f0bea87a6454898d2257b372160e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586440558994801583, guid: 2ca7f0bea87a6454898d2257b372160e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586440558994801583, guid: 2ca7f0bea87a6454898d2257b372160e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586440558994801583, guid: 2ca7f0bea87a6454898d2257b372160e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586440558994801583, guid: 2ca7f0bea87a6454898d2257b372160e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586440558994801583, guid: 2ca7f0bea87a6454898d2257b372160e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6453579716745792817, guid: 2ca7f0bea87a6454898d2257b372160e,
+        type: 3}
+      propertyPath: m_Name
+      value: EHPDisplay
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2ca7f0bea87a6454898d2257b372160e, type: 3}
 --- !u!33 &8370387275669521065
 MeshFilter:
   m_ObjectHideFlags: 0
