@@ -1,10 +1,11 @@
-Uninvert vertical mouse
-weapons to 123 not e
+Make vertical control invertable soontm
 *that was richard, also Koal*
 
-drift the turningthingy
-unwack the throttle mechanic
-make controls intuitive
+
+weapons to 123 not e
+drift the turningthingy (done)
+unwack the throttle mechanic (done)
+make controls intuitive 
 
 Polish:
 

@@ -2819,12 +2819,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf4c6d0eb008d244ac28e6858f9682a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookSensitivity: 0.25
-  throttleMax: 10
+  lookSensitivity: 0.2
+  throttleMax: 5
   throttleMin: 0
   throttleValue: 0
   lookValue: {x: 0, y: 0}
-  speedMult: 20
+  speedMult: 30
   forward: {x: 0, y: 0, z: 0}
 --- !u!54 &1410714118
 Rigidbody:
@@ -2836,7 +2836,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0.75
-  m_AngularDrag: 1.25
+  m_AngularDrag: 1.5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
