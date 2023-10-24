@@ -1,7 +1,13 @@
 Uninvert vertical mouse
 weapons to 123 not e
-*that was richard*
+*that was richard, also Koal*
 
 drift the turningthingy
 unwack the throttle mechanic
 make controls intuitive
+
+Polish:
+
+Make craters in asteroids deeper.
+
+Make rotatey thing less jank (decrease sensitivity, add roll thing?)
