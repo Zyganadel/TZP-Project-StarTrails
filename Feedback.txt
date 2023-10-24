@@ -10,5 +10,6 @@ make controls intuitive
 Polish:
 
 Make craters in asteroids deeper.
+Make engine more obviously a weak point.
 
 Make rotatey thing less jank (decrease sensitivity, add roll thing?)
