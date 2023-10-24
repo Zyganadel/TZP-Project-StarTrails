@@ -1848,7 +1848,7 @@ RectTransform:
   m_GameObject: {fileID: 814575585}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2108675823}
@@ -2993,6 +2993,8 @@ MonoBehaviour:
   currentWeapon: {fileID: 9145888022218386813}
   currentDamage: 2
   weapon: 0
+  isp: 10
+  ihp: 10
   sp: 5
   hp: 10
 --- !u!1001 &1427110420
@@ -3657,7 +3659,7 @@ RectTransform:
   m_GameObject: {fileID: 1606300583}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1823577321}
