@@ -15,7 +15,6 @@ public class HPRotate : MonoBehaviour
         player = GameObject.Find("Player");
         ptf = player.GetComponent<Transform>();
         otf = GetComponent<Transform>();
-        Debug.Log(player.name);
     }
 
     void Update()

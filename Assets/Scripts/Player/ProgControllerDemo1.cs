@@ -16,7 +16,7 @@ public class ProgControllerDemo1 : MonoBehaviour
         if (score >= reqScore)
         {
             Cursor.lockState = CursorLockMode.None;
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
     }
     private int score = 0;
@@ -34,7 +34,7 @@ public class ProgControllerDemo1 : MonoBehaviour
         if (playerController.hp < 1)
         {
             
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
     }
 
