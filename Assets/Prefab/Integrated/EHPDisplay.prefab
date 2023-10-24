@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3603168095446371196}
   - component: {fileID: 3181392912876024627}
   m_Layer: 5
-  m_Name: TempHPWrap
+  m_Name: HPWrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 5150196073449754648}
   - component: {fileID: 8641740247122157683}
   m_Layer: 5
-  m_Name: TempShield
+  m_Name: HUDSP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 5100156502297852355}
   - component: {fileID: 5785768089842610175}
   m_Layer: 5
-  m_Name: TempHP
+  m_Name: HUDHP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 3062050097248866661}
   - component: {fileID: 5734097824645111084}
   m_Layer: 5
-  m_Name: TempShieldWrap
+  m_Name: HPWrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
