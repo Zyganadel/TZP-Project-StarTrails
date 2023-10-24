@@ -2904,8 +2904,8 @@ MonoBehaviour:
   currentWeapon: {fileID: 9145888022218386813}
   currentDamage: 2
   weapon: 0
-  sp: 20
-  hp: 30
+  sp: 5
+  hp: 10
 --- !u!1001 &1427110420
 PrefabInstance:
   m_ObjectHideFlags: 0
