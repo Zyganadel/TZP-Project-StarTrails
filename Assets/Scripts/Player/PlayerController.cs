@@ -118,6 +118,8 @@ public class PlayerController : MonoBehaviour
         Vector3 spv3 = HUDspbar.localScale;
         hpv3.x = thp / tihp;
         spv3.x = tsp / tisp;
+        if (hp < 0) { hpv3.x = 0; }
+        if (sp < 0) { spv3.x = 0; }
 
         // Set scale
         HUDhpbar.localScale = hpv3;
