@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52fbfd9877db75c48b86e42f1be1d564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 3
-  maxHP: 3
+  hp: 4
+  maxHP: 4
   defeatMsg: FoeDestroyed
   scoreValue: 2
   prc: {fileID: 0}
