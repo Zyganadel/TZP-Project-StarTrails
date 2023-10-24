@@ -375,6 +375,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FighterFoe
       objectReference: {fileID: 0}
+    - target: {fileID: 4313538708114957961, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1410714113}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -715,6 +720,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FighterFoe
       objectReference: {fileID: 0}
+    - target: {fileID: 4313538708114957961, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1410714113}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2488,6 +2498,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FighterFoe (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4313538708114957961, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1410714113}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3343,6 +3358,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FighterFoe (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4313538708114957961, guid: 067b35aa8df0c1349b0a87ac28b1d32c,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1410714113}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
