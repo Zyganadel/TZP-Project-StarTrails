@@ -1,4 +1,5 @@
 Make vertical control invertable soontm
+Crosshair, split top fin.
 *that was richard, also Koal*
 
 
