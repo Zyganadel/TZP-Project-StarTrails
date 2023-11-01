@@ -14,3 +14,7 @@ Make craters in asteroids deeper.
 Make engine more obviously a weak point.
 
 Make rotatey thing less jank (decrease sensitivity, add roll thing?)
+
+Features to add:
+
+Make level boundary, add warning boundary before teleporting back.

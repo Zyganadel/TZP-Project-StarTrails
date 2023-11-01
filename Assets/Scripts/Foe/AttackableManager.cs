@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class AttackableManager : MonoBehaviour
@@ -13,6 +12,9 @@ public class AttackableManager : MonoBehaviour
     public ProgControllerDemo1 prc;
     BarManager hpBar;
 
+    // Unbreak CheckHP
+    Collider other;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,26 +24,33 @@ public class AttackableManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        float hp2 = hp;
+        float maxHP2 = maxHP;
+
+        hpBar.hpFloat = hp2 / maxHP2;
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PlayerAttack"))
         {
+            this.other = other;
             prc = other.GetComponentInParent<ProgControllerDemo1>();
             PlayerController pc = other.GetComponentInParent<PlayerController>();
             dTake = pc.currentDamage;
-            if (hp - dTake <= 0) { gameObject.SetActive(false); other.SendMessage(defeatMsg, scoreValue); }
-            else
-            {
-                hp -= dTake;
-            }
-
-            float hp2 = hp;
-            float maxHP2 = maxHP;
-
-            hpBar.hpFloat = hp2 / maxHP2;
+            CheckHP();
+            hp -= dTake;
+        }
+    }
+    public void CheckHP()
+    {
+        if (hp - dTake <= 0)
+        {
+            try { other.SendMessage(defeatMsg, scoreValue); }
+            catch (NullReferenceException e) { Debug.LogError("Got a NullReferenceException!!!"); }
+            gameObject.SetActive(false);
         }
     }
 }

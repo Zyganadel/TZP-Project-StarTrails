@@ -85,6 +85,7 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter(Collision collider)
     {
         string cTag = collider.gameObject.tag;
+        Debug.Log(cTag);
         switch (cTag)
         {
             case "Asteroid":
