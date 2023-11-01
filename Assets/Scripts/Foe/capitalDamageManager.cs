@@ -41,6 +41,7 @@ public class capitalDamageManager : MonoBehaviour
                 {
                     Debug.Log("Module destroyed! Attempting to deal damage to the capital!");
                     localAM.hp -= critComponentAMs[i].scoreValue;
+                    localAM.CheckHP();
                     ccCheck[i] = false;
                 }
             }
