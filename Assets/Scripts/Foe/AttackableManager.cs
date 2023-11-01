@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class AttackableManager : MonoBehaviour
@@ -35,6 +36,7 @@ public class AttackableManager : MonoBehaviour
     {
         if (other.CompareTag("PlayerAttack"))
         {
+            this.other = other;
             prc = other.GetComponentInParent<ProgControllerDemo1>();
             PlayerController pc = other.GetComponentInParent<PlayerController>();
             dTake = pc.currentDamage;
@@ -44,6 +46,11 @@ public class AttackableManager : MonoBehaviour
     }
     public void CheckHP()
     {
-        if (hp - dTake <= 0) { gameObject.SetActive(false); other.SendMessage(defeatMsg, scoreValue); }
+        if (hp - dTake <= 0)
+        {
+            try { other.SendMessage(defeatMsg, scoreValue); }
+            catch (NullReferenceException e) { Debug.LogError("Got a NullReferenceException!!!"); }
+            gameObject.SetActive(false);
+        }
     }
 }
