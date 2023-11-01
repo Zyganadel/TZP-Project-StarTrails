@@ -217,7 +217,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 148677650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 936527372ab874249831f417007a07e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 8403647b5efb5264aa03997b774fc4b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   xMove: 0
@@ -285,7 +285,7 @@ MonoBehaviour:
   hp: 10
   maxHP: 10
   defeatMsg: 
-  scoreValue: 0
+  scoreValue: 50
   prc: {fileID: 1984530322}
 --- !u!1001 &791581732
 PrefabInstance:
@@ -975,7 +975,7 @@ MonoBehaviour:
   hp: 6
   maxHP: 6
   defeatMsg: 
-  scoreValue: 0
+  scoreValue: 10
   prc: {fileID: 1984530322}
 --- !u!1 &1699899893
 GameObject:
@@ -1193,7 +1193,7 @@ MonoBehaviour:
   hp: 6
   maxHP: 6
   defeatMsg: 
-  scoreValue: 0
+  scoreValue: 10
   prc: {fileID: 1984530322}
 --- !u!114 &1984530322 stripped
 MonoBehaviour:
@@ -1234,7 +1234,7 @@ MonoBehaviour:
   hp: 4
   maxHP: 4
   defeatMsg: 
-  scoreValue: 0
+  scoreValue: 30
   prc: {fileID: 1984530322}
 --- !u!1 &2065700651
 GameObject:

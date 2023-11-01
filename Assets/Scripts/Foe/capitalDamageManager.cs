@@ -33,12 +33,15 @@ public class capitalDamageManager : MonoBehaviour
         // Do this here because I coded TempBeam really terribly.
         for (int i = 0;i < critComponentAMs.Length;i++)
         {
+            // Only do things if we don't know that the component was destroyed yet.
             if (ccCheck[i])
             {
+                // Only take damage if the component was obliterated.
                 if (!critComponentObjects[i].activeSelf)
                 {
                     Debug.Log("Module destroyed! Attempting to deal damage to the capital!");
                     localAM.hp -= critComponentAMs[i].scoreValue;
+                    ccCheck[i] = false;
                 }
             }
         }
