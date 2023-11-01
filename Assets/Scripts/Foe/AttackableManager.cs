@@ -22,7 +22,12 @@ public class AttackableManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        float hp2 = hp;
+        float maxHP2 = maxHP;
+
+        hpBar.hpFloat = hp2 / maxHP2;
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -37,11 +42,6 @@ public class AttackableManager : MonoBehaviour
             {
                 hp -= dTake;
             }
-
-            float hp2 = hp;
-            float maxHP2 = maxHP;
-
-            hpBar.hpFloat = hp2 / maxHP2;
         }
     }
 }
