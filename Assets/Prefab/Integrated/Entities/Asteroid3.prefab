@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8011202596026250018}
   m_Layer: 0
   m_Name: Asteroid3
-  m_TagString: Untagged
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
+  maxHP: 1
   defeatMsg: FoeDestroyed
   scoreValue: 1
   prc: {fileID: 0}

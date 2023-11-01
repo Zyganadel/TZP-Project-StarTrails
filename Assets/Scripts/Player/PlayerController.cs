@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public enum Weapon
 {
@@ -50,7 +46,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnChangeWeapon() // eventually use a value to determine whether to go up or down a list of weapons.
@@ -101,7 +97,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "FoeAttack")
         {
-            
+
             TakeBeamDamage(1);
         }
     }
