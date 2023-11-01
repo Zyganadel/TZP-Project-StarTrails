@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class ProgControllerDemo1 : MonoBehaviour
 {
@@ -33,7 +30,7 @@ public class ProgControllerDemo1 : MonoBehaviour
     {
         if (playerController.hp < 1)
         {
-            
+
             SceneManager.LoadScene(3);
         }
     }
