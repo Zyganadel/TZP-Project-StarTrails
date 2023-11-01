@@ -246,6 +246,18 @@ MonoBehaviour:
   defeatMsg: FoeDestroyed
   scoreValue: 10
   prc: {fileID: 1984530322}
+--- !u!114 &148677657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148677650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c9e53f1be860af48ab0a236702fd064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &368617677 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7994790005987349839, guid: 317c0b49f8a7d604c90235fb6a51a8a6,
@@ -1133,6 +1145,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 148677656}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 317c0b49f8a7d604c90235fb6a51a8a6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 148677657}
     - targetCorrespondingSourceObject: {fileID: -7994790005987349839, guid: 317c0b49f8a7d604c90235fb6a51a8a6,
         type: 3}
       insertIndex: -1
