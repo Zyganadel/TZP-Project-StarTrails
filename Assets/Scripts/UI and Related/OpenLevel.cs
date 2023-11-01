@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class OpenLevel : MonoBehaviour
 {
@@ -18,7 +17,7 @@ public class OpenLevel : MonoBehaviour
     {
         SceneManager.LoadScene(sceneID);
     }
-    
+
     void SetScene(int n)
     {
         sceneID = n;

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class capitalDamageManager : MonoBehaviour
@@ -31,7 +29,7 @@ public class capitalDamageManager : MonoBehaviour
     void Update()
     {
         // Do this here because I coded TempBeam really terribly.
-        for (int i = 0;i < critComponentAMs.Length;i++)
+        for (int i = 0; i < critComponentAMs.Length; i++)
         {
             // Only do things if we don't know that the component was destroyed yet.
             if (ccCheck[i])
