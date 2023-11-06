@@ -241,8 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52fbfd9877db75c48b86e42f1be1d564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
-  maxHP: 100
+  hp: 160
+  maxHP: 160
   defeatMsg: FoeDestroyed
   scoreValue: 10
   prc: {fileID: 1984530322}
@@ -501,10 +501,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52fbfd9877db75c48b86e42f1be1d564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 10
-  maxHP: 10
+  hp: 14
+  maxHP: 14
   defeatMsg: 
-  scoreValue: 50
+  scoreValue: 75
   prc: {fileID: 1984530322}
 --- !u!1 &379336762
 GameObject:
@@ -1384,7 +1384,7 @@ MonoBehaviour:
   hp: 6
   maxHP: 6
   defeatMsg: 
-  scoreValue: 10
+  scoreValue: 15
   prc: {fileID: 1984530322}
 --- !u!1 &1699899893
 GameObject:
@@ -1622,7 +1622,7 @@ MonoBehaviour:
   hp: 6
   maxHP: 6
   defeatMsg: 
-  scoreValue: 10
+  scoreValue: 15
   prc: {fileID: 1984530322}
 --- !u!1001 &1964190365
 PrefabInstance:
@@ -1769,10 +1769,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52fbfd9877db75c48b86e42f1be1d564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 4
-  maxHP: 4
+  hp: 8
+  maxHP: 8
   defeatMsg: 
-  scoreValue: 30
+  scoreValue: 60
   prc: {fileID: 1984530322}
 --- !u!1 &2065700651
 GameObject:
