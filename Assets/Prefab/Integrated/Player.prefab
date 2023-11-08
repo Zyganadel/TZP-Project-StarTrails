@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf4c6d0eb008d244ac28e6858f9682a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookSensitivity: 0.2
+  lookSensitivity: 1.5
   throttleMax: 5
   throttleMin: 0
   throttleValue: 0
@@ -291,6 +291,8 @@ MonoBehaviour:
   currentWeapon: {fileID: 3079193680307738039}
   currentDamage: 2
   weapon: 0
+  isp: 10
+  ihp: 10
   sp: 5
   hp: 10
 --- !u!114 &2183346247966549492
