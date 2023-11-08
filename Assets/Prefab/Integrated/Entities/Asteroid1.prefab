@@ -122,5 +122,5 @@ MonoBehaviour:
   hp: 1
   maxHP: 1
   defeatMsg: FoeDestroyed
-  scoreValue: 0
+  scoreValue: 1
   prc: {fileID: 0}

@@ -52,8 +52,8 @@ public class PlayerMovementHandler : MonoBehaviour
     void Update()
     {
         float t = Time.deltaTime;
-        float timedRot = t * lookSensitivity * 50;
-        float timedRoll = t * rollSensitivity * 50;
+        float timedRot = t * lookSensitivity * 25;
+        float timedRoll = t * rollSensitivity * 25;
 
         //rotate the parent of player stuff by whatever values we have.
         rb.AddRelativeTorque(lookValue.y * timedRot, lookValue.x * timedRot, rollValue * timedRoll);
