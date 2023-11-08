@@ -52,7 +52,7 @@ public class PlayerMovementHandler : MonoBehaviour
     void Update()
     {
         float t = Time.deltaTime;
-        float timedRot = t * lookSensitivity * 25;
+        float timedRot = t * lookSensitivity * 15;
         float timedRoll = t * rollSensitivity * 25;
 
         //rotate the parent of player stuff by whatever values we have.
