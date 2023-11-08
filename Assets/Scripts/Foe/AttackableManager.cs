@@ -18,18 +18,21 @@ public class AttackableManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hpBar = GetComponentInChildren<BarManager>();
+        try { hpBar = GetComponentInChildren<BarManager>(); }
+        catch { }
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        float hp2 = hp;
-        float maxHP2 = maxHP;
+        if(hpBar != null)
+        {
+            float hp2 = hp;
+            float maxHP2 = maxHP;
 
-        hpBar.hpFloat = hp2 / maxHP2;
-
+            hpBar.hpFloat = hp2 / maxHP2;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
