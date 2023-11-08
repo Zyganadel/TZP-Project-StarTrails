@@ -318,7 +318,9 @@ MonoBehaviour:
 
     Decrease throttle
 
-    Rotate craft
+    Roll
+
+    Pitch / Yaw
 
     Fire
 
@@ -1069,6 +1071,8 @@ MonoBehaviour:
   m_text: 'W
 
     S
+
+    A / D
 
     Move Mouse
 
