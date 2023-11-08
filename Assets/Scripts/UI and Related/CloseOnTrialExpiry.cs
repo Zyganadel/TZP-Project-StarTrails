@@ -13,6 +13,7 @@ public class CloseOnTrialExpiry : MonoBehaviour
     }
     IEnumerator Wait()
     {
+        Cursor.lockState = CursorLockMode.None;
         yield return new WaitForSeconds(5); 
 
         if (quit) { Application.Quit(); }
