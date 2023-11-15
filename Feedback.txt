@@ -18,3 +18,11 @@ Make rotatey thing less jank (decrease sensitivity, add roll thing?)
 Features to add:
 
 Make level boundary, add warning boundary before teleporting back.
+
+
+
+Ok new section for stuff after sprint 2:
+
+Will: Make firing more obvious (sound, projectiles ect.), controls need to be "un-wack-ed" still.
+
+Noticed: players didn't notice the level selector.
