@@ -121,37 +121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beamMaxTime: 0.1
---- !u!1 &3174951272305157314
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 202339770413593910}
-  m_Layer: 0
-  m_Name: tempKinetic
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &202339770413593910
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3174951272305157314}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6908680420224196487}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3929155159121055774
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,8 +156,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2749735053382014823}
-  - {fileID: 5887308581616842554}
-  - {fileID: 202339770413593910}
   - {fileID: 8193057782395788193}
   - {fileID: 1652589933116771285}
   - {fileID: 539997133738563297}
@@ -287,9 +254,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beamWeapon: {fileID: 3079193680307738039}
   beamDamage: 2
-  kineticWeapon: {fileID: 3174951272305157314}
+  kineticWeapon: {fileID: 6343964620498284255}
   kineticDamage: 2
-  missileWeapon: {fileID: 7887607051375424332}
+  missileWeapon: {fileID: 9149120675736520199}
   missileDamage: 2
   currentWeapon: {fileID: 3079193680307738039}
   currentDamage: 2
@@ -331,7 +298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &539997133738563297
 Transform:
   m_ObjectHideFlags: 0
@@ -430,6 +397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b55314958bfb40489c2d619412a6610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &7813795556441578923
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,37 +535,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!1 &7887607051375424332
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5887308581616842554}
-  m_Layer: 0
-  m_Name: tempMissile
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &5887308581616842554
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7887607051375424332}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6908680420224196487}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9149120675736520199
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,7 +554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &510672063498223376
 Transform:
   m_ObjectHideFlags: 0
