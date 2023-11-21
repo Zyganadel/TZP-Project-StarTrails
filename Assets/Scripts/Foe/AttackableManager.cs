@@ -3,12 +3,14 @@ using UnityEngine;
 
 public class AttackableManager : MonoBehaviour
 {
+
     public int hp = 1;
     public int maxHP = 1;
     public string defeatMsg;
     public int scoreValue;
     int dTake = 0;
 
+    PlayerController pc;
     public ProgControllerDemo1 prc;
     BarManager hpBar;
 
@@ -18,6 +20,11 @@ public class AttackableManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Rigidbody rb;
+        rb = GetComponent<Rigidbody>();
+        if (rb == null) { rb = gameObject.AddComponent<Rigidbody>(); }
+        rb.useGravity = false;
+        rb.isKinematic = true;
         try { hpBar = GetComponentInChildren<BarManager>(); }
         catch { }
     }
@@ -41,7 +48,12 @@ public class AttackableManager : MonoBehaviour
         {
             this.other = other;
             prc = other.GetComponentInParent<ProgControllerDemo1>();
-            PlayerController pc = other.GetComponentInParent<PlayerController>();
+            pc = other.GetComponentInParent<PlayerController>();
+            if (pc == null )
+            {
+                kineticWeapon kw = other.GetComponent<kineticWeapon>();
+                pc = kw.origin;
+            }
             dTake = pc.currentDamage;
             CheckHP();
             hp -= dTake;
@@ -51,7 +63,7 @@ public class AttackableManager : MonoBehaviour
     {
         if (hp - dTake <= 0)
         {
-            try { other.SendMessage(defeatMsg, scoreValue); }
+            try { pc.gameObject.SendMessage(defeatMsg, scoreValue); }
             catch (NullReferenceException e) { Debug.LogError("Got a NullReferenceException!!!"); }
             gameObject.SetActive(false);
         }

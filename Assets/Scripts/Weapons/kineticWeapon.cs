@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class kineticWeapon : MonoBehaviour
 {
+    public PlayerController origin;
     [SerializeField] private float speed = 1.0f;
     private bool isClone = false;
     [SerializeField] private float timer = 5.0f;
@@ -34,6 +35,7 @@ public class kineticWeapon : MonoBehaviour
         clonetf.rotation = ptf.rotation;
         kineticWeapon clonekw = clone.GetComponent<kineticWeapon>();
         clonekw.isClone = true;
-        //gameObject.SetActive(false);
+        clonekw.origin = GetComponentInParent<PlayerController>();
+        gameObject.SetActive(false);
     }
 }
