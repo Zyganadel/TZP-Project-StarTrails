@@ -6,6 +6,7 @@ using UnityEngine;
 public class missileWeapon : MonoBehaviour
 {
     public PlayerController origin;
+    [SerializeField] private GameObject cam;
     [SerializeField] private float speed = 10.0f;
     [SerializeField] private float lookSpeed = 5f;
     private bool isClone = false;
@@ -16,18 +17,17 @@ public class missileWeapon : MonoBehaviour
     // Start is called before the first frame update
     public void AcquireTarget()
     {
-        // very sloppy raycast stuff for missile targeting.
-        Ray ray = new Ray();
-        ray.direction = transform.up;
-        RaycastHit hit;
-        Physics.Raycast(ray, out hit); // to my knowledge, this raycasts in ray's direction, from ray's origin, returning the first thing it hits.
+        cam = GameObject.Find("Main Camera");
+        if (cam == null) { Debug.Log("Cam == null somehow!"); }
+        missileTargeter mt = cam.GetComponent<missileTargeter>();
+        RaycastHit hit = mt.GetTarget();
         target = hit.transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (target == null) { Destroy(gameObject);}
+        if (target == null && isClone) { Destroy(gameObject);}
         if (isClone)
         {
             transform.position += transform.forward * speed * Time.deltaTime;
