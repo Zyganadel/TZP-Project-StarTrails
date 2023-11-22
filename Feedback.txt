@@ -26,3 +26,8 @@ Ok new section for stuff after sprint 2:
 Will: Make firing more obvious (sound, projectiles ect.), controls need to be "un-wack-ed" still.
 
 Noticed: players didn't notice the level selector.
+
+Post sprint 3:
+
+Selected weapon display where?
+Why am crash? How not crash into air?
