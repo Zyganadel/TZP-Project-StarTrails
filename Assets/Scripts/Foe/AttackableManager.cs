@@ -51,8 +51,10 @@ public class AttackableManager : MonoBehaviour
             pc = other.GetComponentInParent<PlayerController>();
             if (pc == null )
             {
+                missileWeapon mw = other.GetComponent<missileWeapon>();
                 kineticWeapon kw = other.GetComponent<kineticWeapon>();
-                pc = kw.origin;
+                try { pc = kw.origin; } catch { }
+                if (pc == null) { pc = mw.origin; }
             }
             dTake = pc.currentDamage;
             CheckHP();
