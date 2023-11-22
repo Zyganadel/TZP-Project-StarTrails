@@ -76,6 +76,7 @@ public class PlayerController : MonoBehaviour
     {
         currentWeapon.SetActive(true);
         if (weapon == Weapon.kinetic) { kineticWeapon.SendMessage("Fire"); }
+        if (weapon == Weapon.missile) { missileWeapon.SendMessage("Fire"); }
     }
 
     void OnCollisionEnter(Collision collider)
