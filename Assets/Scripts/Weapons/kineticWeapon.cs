@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class kineticWeapon : MonoBehaviour
@@ -12,7 +10,7 @@ public class kineticWeapon : MonoBehaviour
     // Start is called before the first frame update
     void OnAwake()
     {
-        
+
     }
 
     // Update is called once per frame
