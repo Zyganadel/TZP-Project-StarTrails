@@ -27,7 +27,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: hp
-    value: 3
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: maxHP
+    value: 4
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: defeatMsg
