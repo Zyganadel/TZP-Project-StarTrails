@@ -10,8 +10,8 @@ public class AIMovement : MonoBehaviour
     public Rigidbody rb;
 
     // Angular speed in radians per sec.
-    public float speed = 1.0f;
-    public float moveSpeed = 0.1f;
+    [SerializeField] float speed = 1.0f;
+    [SerializeField] float moveSpeed = 0.1f;
 
     void Start()
     {
