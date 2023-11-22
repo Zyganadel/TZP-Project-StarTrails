@@ -4374,16 +4374,6 @@ PrefabInstance:
       propertyPath: throttleMax
       value: 2.5
       objectReference: {fileID: 0}
-    - target: {fileID: 486724309618328214, guid: 0155ebbf2b7373e46aa91f2335529f89,
-        type: 3}
-      propertyPath: lookSensitivity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 486724309618328214, guid: 0155ebbf2b7373e46aa91f2335529f89,
-        type: 3}
-      propertyPath: rollSensitivity
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2183346247966549492, guid: 0155ebbf2b7373e46aa91f2335529f89,
         type: 3}
       propertyPath: scoreUI

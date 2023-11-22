@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf4c6d0eb008d244ac28e6858f9682a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookSensitivity: 1.25
+  lookSensitivity: 0.8
   rollSensitivity: 1
   throttleMax: 5
   throttleMin: 0
