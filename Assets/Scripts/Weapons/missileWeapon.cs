@@ -14,11 +14,11 @@ public class missileWeapon : MonoBehaviour
     [SerializeField] private Transform target;
 
     // Start is called before the first frame update
-    void OnAwake()
+    public void AcquireTarget()
     {
         // very sloppy raycast stuff for missile targeting.
         Ray ray = new Ray();
-        ray.direction = transform.forward;
+        ray.direction = transform.up;
         RaycastHit hit;
         Physics.Raycast(ray, out hit); // to my knowledge, this raycasts in ray's direction, from ray's origin, returning the first thing it hits.
         target = hit.transform;
@@ -27,6 +27,7 @@ public class missileWeapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (target == null) { Destroy(gameObject);}
         if (isClone)
         {
             transform.position += transform.forward * speed * Time.deltaTime;
@@ -34,16 +35,22 @@ public class missileWeapon : MonoBehaviour
             if (timer <= 0) { GameObject.Destroy(gameObject); }
         }
 
-        Vector3 targetDirection = target.position - transform.position;
+        if (isClone) // only target things if we're a clone.
+        {
+            Vector3 targetDirection = target.position - transform.position;
 
-        // The step size is equal to speed times frame time.
-        float singleStep = lookSpeed * Time.deltaTime;
+            // The step size is equal to speed times frame time.
+            float singleStep = lookSpeed * Time.deltaTime;
 
-        // Rotate the forward vector towards the target direction by one step
-        Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+            // Rotate the forward vector towards the target direction by one step
+            Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
 
-        // Calculate a rotation a step closer to the target and applies rotation to this object
-        transform.rotation = Quaternion.LookRotation(newDirection);
+            // Draw a ray pointing at our target in
+            Debug.DrawRay(transform.position, newDirection, Color.red);
+
+            // Calculate a rotation a step closer to the target and applies rotation to this object
+            transform.rotation = Quaternion.LookRotation(newDirection);
+        }
     }
 
     void Fire()
@@ -56,6 +63,7 @@ public class missileWeapon : MonoBehaviour
         missileWeapon clonemw = clone.GetComponent<missileWeapon>();
         clonemw.isClone = true;
         clonemw.origin = GetComponentInParent<PlayerController>();
+        clonemw.AcquireTarget();
         gameObject.SetActive(false);
     }
 }
