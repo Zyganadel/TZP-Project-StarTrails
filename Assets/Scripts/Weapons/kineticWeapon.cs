@@ -18,7 +18,7 @@ public class kineticWeapon : MonoBehaviour
     {
         if (isClone)
         {
-            transform.position += transform.forward * speed * Time.deltaTime;
+            transform.position += transform.up * speed * Time.deltaTime;
             timer -= Time.deltaTime;
             if (timer <= 0) { GameObject.Destroy(gameObject); }
         }
