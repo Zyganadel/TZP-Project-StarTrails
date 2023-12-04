@@ -1,29 +1,57 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovementHandler : MonoBehaviour
 {
-    public float lookSensitivity = 1f;
-    public float rollSensitivity = 1;
-    public float throttleMax = 10.0f;
-    public float throttleMin = 0.0f;
-    public float throttleValue = 0.0f;
+    [SerializeField] string userPrefLoc = "userprefs.cfg";
+    [SerializeField] float lookSensitivity = 1f;
+    [SerializeField] float rollSensitivity = 1;
+    [SerializeField] float throttleMax = 10.0f;
+    [SerializeField] float throttleMin = 0.0f;
+    [SerializeField] float throttleValue = 0.0f;
+    [SerializeField] float speedMult = 1;
+    [SerializeField] bool useWrongFlightControls = false;
     float throttleMod;
     float rollValue;
     public Vector2 lookValue;
     private Transform tf;
     private Rigidbody rb;
-    public float speedMult = 1;
     public Vector3 forward;
+
     // Start is called before the first frame update
     void Start()
     {
         tf = GetComponent<Transform>();
         rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
+        ImportControlPrefs();
+    }
+
+    void ImportControlPrefs()
+    {
+        // Create file with default values if userprefs doesn't exist.
+        if (!File.Exists(userPrefLoc))
+        {
+            string[] write =
+            {
+                $"{lookSensitivity}",
+                $"{rollSensitivity}",
+                $"{useWrongFlightControls}"
+            };
+            File.WriteAllLines(userPrefLoc, write);
+        }
+        // But read things if the file does exist.
+        else
+        {
+            string[] read = File.ReadAllLines(userPrefLoc);
+            lookSensitivity = float.Parse(read[0]);
+            rollSensitivity = float.Parse(read[1]);
+            useWrongFlightControls = bool.Parse(read[2]);
+        }
     }
 
     public void OnTestKey() { Debug.Log("Test message."); }
