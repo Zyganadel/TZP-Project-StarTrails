@@ -4,8 +4,8 @@ using UnityEngine;
 public class PrefsManager : MonoBehaviour
 {
     private string userPrefLoc = "userprefs.cfg";
-    public float lookSensitivity;
-    public float rollSensitivity;
+    public float lookSensitivity = 1f;
+    public float rollSensitivity = 1f;
     public bool useWrongFlightControls;
 
     // Start is called before the first frame update
@@ -44,11 +44,18 @@ public class PrefsManager : MonoBehaviour
         switch (data[0])
         {
             case 0:
-                rollSensitivity = (float)data[1]; break;
-            case 1:
                 lookSensitivity = (float)data[1]; break;
+            case 1:
+                rollSensitivity = (float)data[1]; break;
             case 2:
                 useWrongFlightControls = (bool)data[1]; break;
         }
+        string[] write =
+            {
+                $"{lookSensitivity}",
+                $"{rollSensitivity}",
+                $"{useWrongFlightControls}"
+            };
+        File.WriteAllLines(userPrefLoc, write);
     }
 }
