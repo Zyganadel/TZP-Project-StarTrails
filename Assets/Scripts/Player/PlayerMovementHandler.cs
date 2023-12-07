@@ -69,6 +69,7 @@ public class PlayerMovementHandler : MonoBehaviour
     public void OnLook(InputValue value)
     {
         lookValue = value.Get<Vector2>();
+        if (useWrongFlightControls) { lookValue.y *= -1; }
     }
 
     void OnRoll(InputValue value)
