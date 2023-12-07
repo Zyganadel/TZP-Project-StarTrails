@@ -7,6 +7,7 @@ public class PrefsManager : MonoBehaviour
     public float lookSensitivity = 1f;
     public float rollSensitivity = 1f;
     public bool useWrongFlightControls;
+    public bool doneLoading = false;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +35,10 @@ public class PrefsManager : MonoBehaviour
             lookSensitivity = float.Parse(read[0]);
             rollSensitivity = float.Parse(read[1]);
             useWrongFlightControls = bool.Parse(read[2]);
+            foreach (string line in read) { Debug.Log(line); }
+            Debug.Log(lookSensitivity);
         }
+        doneLoading = true;
     }
 
     // Update is called once per frame
