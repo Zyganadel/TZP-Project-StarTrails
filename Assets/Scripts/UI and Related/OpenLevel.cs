@@ -9,6 +9,9 @@ public class OpenLevel : MonoBehaviour
 
     void Start()
     {
+        // This is redundant, but just to be sure.
+        Cursor.lockState = CursorLockMode.None;
+
         Button btn = b.GetComponent<Button>();
         btn.onClick.AddListener(OnClick);
     }

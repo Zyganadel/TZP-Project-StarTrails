@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovementHandler : MonoBehaviour
 {
@@ -63,7 +64,7 @@ public class PlayerMovementHandler : MonoBehaviour
         Debug.Log(rValue);
     }
 
-    public void OnEscape() { Application.Quit(); }
+    public void OnEscape() { Cursor.lockState = CursorLockMode.None; SceneManager.LoadScene(0); }
 
     // take the vector2 "value" given by OnLook
     public void OnLook(InputValue value)
